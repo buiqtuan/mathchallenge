@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B3074871F2CCD5300BAC923 /* Neon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7B3074861F2CCD5300BAC923 /* Neon.ttf */; };
+		7B3074891F2CCE7400BAC923 /* varsity_regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7B3074881F2CCE7400BAC923 /* varsity_regular.ttf */; };
+		7B30748B1F2CCED700BAC923 /* Freshman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7B30748A1F2CCED700BAC923 /* Freshman.ttf */; };
+		7B30748D1F2CFDB900BAC923 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B30748C1F2CFDB900BAC923 /* MainVC.swift */; };
+		7B30748F1F2CFDCB00BAC923 /* StatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B30748E1F2CFDCB00BAC923 /* StatVC.swift */; };
+		7B70E31F1F2E355700B68B16 /* InitStatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B70E31E1F2E355700B68B16 /* InitStatVC.swift */; };
 		7BD75CCD1F2B6864005F4F5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD75CCC1F2B6864005F4F5A /* AppDelegate.swift */; };
-		7BD75CCF1F2B6864005F4F5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD75CCE1F2B6864005F4F5A /* ViewController.swift */; };
+		7BD75CCF1F2B6864005F4F5A /* InitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD75CCE1F2B6864005F4F5A /* InitVC.swift */; };
 		7BD75CD21F2B6864005F4F5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BD75CD01F2B6864005F4F5A /* Main.storyboard */; };
 		7BD75CD51F2B6864005F4F5A /* Math_Challenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7BD75CD31F2B6864005F4F5A /* Math_Challenge.xcdatamodeld */; };
 		7BD75CD71F2B6864005F4F5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BD75CD61F2B6864005F4F5A /* Assets.xcassets */; };
@@ -35,9 +41,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7B3074861F2CCD5300BAC923 /* Neon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Neon.ttf; sourceTree = "<group>"; };
+		7B3074881F2CCE7400BAC923 /* varsity_regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = varsity_regular.ttf; sourceTree = "<group>"; };
+		7B30748A1F2CCED700BAC923 /* Freshman.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Freshman.ttf; sourceTree = "<group>"; };
+		7B30748C1F2CFDB900BAC923 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		7B30748E1F2CFDCB00BAC923 /* StatVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatVC.swift; sourceTree = "<group>"; };
+		7B70E31E1F2E355700B68B16 /* InitStatVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitStatVC.swift; sourceTree = "<group>"; };
 		7BD75CC91F2B6864005F4F5A /* Math Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Math Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BD75CCC1F2B6864005F4F5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7BD75CCE1F2B6864005F4F5A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7BD75CCE1F2B6864005F4F5A /* InitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitVC.swift; sourceTree = "<group>"; };
 		7BD75CD11F2B6864005F4F5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7BD75CD41F2B6864005F4F5A /* Math_Challenge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Math_Challenge.xcdatamodel; sourceTree = "<group>"; };
 		7BD75CD61F2B6864005F4F5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,8 +112,14 @@
 			isa = PBXGroup;
 			children = (
 				7BD75CCC1F2B6864005F4F5A /* AppDelegate.swift */,
-				7BD75CCE1F2B6864005F4F5A /* ViewController.swift */,
+				7BD75CCE1F2B6864005F4F5A /* InitVC.swift */,
+				7B30748E1F2CFDCB00BAC923 /* StatVC.swift */,
+				7B30748C1F2CFDB900BAC923 /* MainVC.swift */,
+				7B70E31E1F2E355700B68B16 /* InitStatVC.swift */,
 				7BD75CD01F2B6864005F4F5A /* Main.storyboard */,
+				7B30748A1F2CCED700BAC923 /* Freshman.ttf */,
+				7B3074881F2CCE7400BAC923 /* varsity_regular.ttf */,
+				7B3074861F2CCD5300BAC923 /* Neon.ttf */,
 				7BD75CD61F2B6864005F4F5A /* Assets.xcassets */,
 				7BD75CD81F2B6864005F4F5A /* LaunchScreen.storyboard */,
 				7BD75CDB1F2B6864005F4F5A /* Info.plist */,
@@ -196,6 +214,7 @@
 				TargetAttributes = {
 					7BD75CC81F2B6864005F4F5A = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 84L594LFKJ;
 						ProvisioningStyle = Automatic;
 					};
 					7BD75CDF1F2B6864005F4F5A = {
@@ -235,6 +254,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B30748B1F2CCED700BAC923 /* Freshman.ttf in Resources */,
+				7B3074891F2CCE7400BAC923 /* varsity_regular.ttf in Resources */,
+				7B3074871F2CCD5300BAC923 /* Neon.ttf in Resources */,
 				7BD75CDA1F2B6864005F4F5A /* LaunchScreen.storyboard in Resources */,
 				7BD75CD71F2B6864005F4F5A /* Assets.xcassets in Resources */,
 				7BD75CD21F2B6864005F4F5A /* Main.storyboard in Resources */,
@@ -262,8 +284,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B70E31F1F2E355700B68B16 /* InitStatVC.swift in Sources */,
 				7BD75CD51F2B6864005F4F5A /* Math_Challenge.xcdatamodeld in Sources */,
-				7BD75CCF1F2B6864005F4F5A /* ViewController.swift in Sources */,
+				7B30748D1F2CFDB900BAC923 /* MainVC.swift in Sources */,
+				7BD75CCF1F2B6864005F4F5A /* InitVC.swift in Sources */,
+				7B30748F1F2CFDCB00BAC923 /* StatVC.swift in Sources */,
 				7BD75CCD1F2B6864005F4F5A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,6 +443,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 84L594LFKJ;
 				INFOPLIST_FILE = "Math Challenge/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "tuanbq.Math-Challenge";
@@ -430,6 +456,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 84L594LFKJ;
 				INFOPLIST_FILE = "Math Challenge/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "tuanbq.Math-Challenge";
@@ -511,6 +538,7 @@
 				7BD75CF61F2B6864005F4F5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7BD75CF71F2B6864005F4F5A /* Build configuration list for PBXNativeTarget "Math ChallengeTests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +547,7 @@
 				7BD75CF91F2B6864005F4F5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7BD75CFA1F2B6864005F4F5A /* Build configuration list for PBXNativeTarget "Math ChallengeUITests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +556,7 @@
 				7BD75CFC1F2B6864005F4F5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -9,6 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var takeChallengeBtn: UIButton!
+    @IBOutlet weak var treeNumberImgView: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
