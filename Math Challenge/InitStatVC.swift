@@ -9,11 +9,16 @@
 import UIKit
 
 class InitStatVC: UIViewController {
+    @IBOutlet weak var currentScoreLbl: UILabel!
+    @IBOutlet weak var highestScoreLbl: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        currentScoreLbl.text = "Current Score: \(UserDefaults.standard.integer(forKey: KEY_RECORD_CURRENT))"
+        highestScoreLbl.text = "Current Score: \(UserDefaults.standard.integer(forKey: KEY_RECORD_HIGHEST))"
     }
 
     override func didReceiveMemoryWarning() {

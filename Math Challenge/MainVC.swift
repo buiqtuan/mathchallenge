@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import AudioToolbox
+
+let KEY_RECORD_HIGHEST = "KEY_RECORD_HIGHEST"
+let KEY_RECORD_CURRENT = "KEY_RECORD_CURRENT"
 
 class MainVC: UIViewController {
     @IBOutlet weak var firstFactor: UILabel!
@@ -16,8 +20,16 @@ class MainVC: UIViewController {
     @IBOutlet weak var startBtn: UIButton!
     @IBOutlet weak var record: UILabel!
     
+    @IBOutlet weak var currentScoreLbl: UILabel!
+    @IBOutlet weak var highestScoreLbl: UILabel!
+    @IBOutlet weak var failPopupView: UIView!
+    @IBOutlet weak var failPopupBanner: UIView!
+    @IBOutlet weak var failBackBtn: UIButton!
+    @IBOutlet weak var failPlayAgainBtn: UIButton!
+    
+    
     var timer = Timer()
-    var maxTime = 5
+    var maxTime = 300
     var firstFactorInt = 0
     var secondFactorInt = 0
     var resultInt = 0
@@ -39,9 +51,38 @@ class MainVC: UIViewController {
         //set up timer counter
         self.timeCounter.progress = 1.0
         
-        //init the fist pair of factors
-        self.initResult()
+        //setup fail popup
+        self.failPopupBanner.layer.cornerRadius = 10
+        self.failPopupBanner.backgroundColor = UIColor.gray
+        self.failBackBtn.layer.cornerRadius = 4
+        self.failPlayAgainBtn.layer.cornerRadius = 4
         
+        let blurEffectPopup = UIBlurEffect(style: UIBlurEffectStyle.extraLight)
+        let blurEffectViewPopup = UIVisualEffectView(effect: blurEffectPopup)
+        blurEffectViewPopup.frame = self.failPopupView.bounds
+        blurEffectViewPopup.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        blurEffectViewPopup.isUserInteractionEnabled = false
+        
+        self.failPopupView.backgroundColor = UIColor.clear
+        self.failPopupView.insertSubview(blurEffectViewPopup, at: 0)
+        
+    }
+    @IBAction func reloadPlayGround(_ sender: Any) {
+        self.result.text = "0"
+        self.timeCounter.progress = 1.0
+        self.startBtn.isHidden = false
+        self.failPopupView.isHidden = true
+        self.timer.invalidate()
+    }
+    
+    @IBAction func playAgainPressed(_ sender: Any) {
+        self.recordInt = 0
+        self.record.text = "0"
+        self.failPopupView.isHidden = true
+        self.timeCounter.progress = 1.0
+        self.maxTime = 300
+        self.timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(MainVC.setProgressBar), userInfo: nil, repeats: true)
+        self.initResult()
     }
     
     func initResult() {
@@ -80,9 +121,13 @@ class MainVC: UIViewController {
     }
     
     @IBAction func hideBtnView(_ sender: Any) {
+        self.maxTime = 300
+        
         self.startBtn.isHidden = true
+        
+        self.initResult()
 
-        self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(MainVC.setProgressBar), userInfo: nil, repeats: true)
+        self.timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(MainVC.setProgressBar), userInfo: nil, repeats: true)
     }
     
     @IBAction func correctPressed(_ sender: Any) {
@@ -91,11 +136,11 @@ class MainVC: UIViewController {
             self.record.text = "\(self.recordInt)"
             self.timer.invalidate()
             self.timeCounter.progress = 1.0
-            self.maxTime = 5
-            self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(MainVC.setProgressBar), userInfo: nil, repeats: true)
+            self.maxTime = 300
+            self.timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(MainVC.setProgressBar), userInfo: nil, repeats: true)
             self.initResult()
         } else {
-            self.timer.invalidate()
+            self.showFailPopup()
         }
     }
     
@@ -105,12 +150,24 @@ class MainVC: UIViewController {
             self.record.text = "\(self.recordInt)"
             self.timer.invalidate()
             self.timeCounter.progress = 1.0
-            self.maxTime = 5
-            self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(MainVC.setProgressBar), userInfo: nil, repeats: true)
+            self.maxTime = 300
+            self.timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(MainVC.setProgressBar), userInfo: nil, repeats: true)
             self.initResult()
         } else {
-            self.timer.invalidate()
+            self.showFailPopup()
         }
+    }
+    
+    func showFailPopup() {
+        AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+        self.timer.invalidate()
+        UserDefaults.standard.set(self.recordInt, forKey: KEY_RECORD_CURRENT)
+        if self.recordInt > UserDefaults.standard.integer(forKey: KEY_RECORD_HIGHEST) {
+            UserDefaults.standard.set(self.recordInt, forKey: KEY_RECORD_HIGHEST)
+        }
+        self.currentScoreLbl.text = "Current Score: \(UserDefaults.standard.integer(forKey: KEY_RECORD_CURRENT))"
+        self.highestScoreLbl.text = "Highest Score: \(UserDefaults.standard.integer(forKey: KEY_RECORD_HIGHEST))"
+        self.failPopupView.isHidden = false
     }
     
     func randomInt(min: Int, max:Int) -> Int {
@@ -120,6 +177,9 @@ class MainVC: UIViewController {
     func setProgressBar()
     {
         maxTime -= 1
-        self.timeCounter.setProgress(Float(maxTime) / Float(5), animated: true)
+        self.timeCounter.setProgress(Float(maxTime) / Float(300), animated: true)
+        if self.timeCounter.progress == 0 {
+            showFailPopup()
+        }
     }
 }
