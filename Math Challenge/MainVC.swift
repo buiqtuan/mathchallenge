@@ -67,6 +67,11 @@ class MainVC: UIViewController {
         self.failPopupView.insertSubview(blurEffectViewPopup, at: 0)
         
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.timer.invalidate()
+    }
+    
     @IBAction func reloadPlayGround(_ sender: Any) {
         self.result.text = "0"
         self.timeCounter.progress = 1.0
