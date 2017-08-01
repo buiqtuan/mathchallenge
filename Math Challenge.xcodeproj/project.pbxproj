@@ -11,8 +11,8 @@
 		7B3074891F2CCE7400BAC923 /* varsity_regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7B3074881F2CCE7400BAC923 /* varsity_regular.ttf */; };
 		7B30748B1F2CCED700BAC923 /* Freshman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7B30748A1F2CCED700BAC923 /* Freshman.ttf */; };
 		7B30748D1F2CFDB900BAC923 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B30748C1F2CFDB900BAC923 /* MainVC.swift */; };
-		7B30748F1F2CFDCB00BAC923 /* StatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B30748E1F2CFDCB00BAC923 /* StatVC.swift */; };
 		7B70E31F1F2E355700B68B16 /* InitStatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B70E31E1F2E355700B68B16 /* InitStatVC.swift */; };
+		7BD531081F30BE21001ECD82 /* projectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD531071F30BE21001ECD82 /* projectExtensions.swift */; };
 		7BD75CCD1F2B6864005F4F5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD75CCC1F2B6864005F4F5A /* AppDelegate.swift */; };
 		7BD75CCF1F2B6864005F4F5A /* InitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD75CCE1F2B6864005F4F5A /* InitVC.swift */; };
 		7BD75CD21F2B6864005F4F5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BD75CD01F2B6864005F4F5A /* Main.storyboard */; };
@@ -45,8 +45,8 @@
 		7B3074881F2CCE7400BAC923 /* varsity_regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = varsity_regular.ttf; sourceTree = "<group>"; };
 		7B30748A1F2CCED700BAC923 /* Freshman.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Freshman.ttf; sourceTree = "<group>"; };
 		7B30748C1F2CFDB900BAC923 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
-		7B30748E1F2CFDCB00BAC923 /* StatVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatVC.swift; sourceTree = "<group>"; };
 		7B70E31E1F2E355700B68B16 /* InitStatVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitStatVC.swift; sourceTree = "<group>"; };
+		7BD531071F30BE21001ECD82 /* projectExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = projectExtensions.swift; sourceTree = "<group>"; };
 		7BD75CC91F2B6864005F4F5A /* Math Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Math Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BD75CCC1F2B6864005F4F5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BD75CCE1F2B6864005F4F5A /* InitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitVC.swift; sourceTree = "<group>"; };
@@ -113,7 +113,7 @@
 			children = (
 				7BD75CCC1F2B6864005F4F5A /* AppDelegate.swift */,
 				7BD75CCE1F2B6864005F4F5A /* InitVC.swift */,
-				7B30748E1F2CFDCB00BAC923 /* StatVC.swift */,
+				7BD531071F30BE21001ECD82 /* projectExtensions.swift */,
 				7B30748C1F2CFDB900BAC923 /* MainVC.swift */,
 				7B70E31E1F2E355700B68B16 /* InitStatVC.swift */,
 				7BD75CD01F2B6864005F4F5A /* Main.storyboard */,
@@ -285,10 +285,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B70E31F1F2E355700B68B16 /* InitStatVC.swift in Sources */,
+				7BD531081F30BE21001ECD82 /* projectExtensions.swift in Sources */,
 				7BD75CD51F2B6864005F4F5A /* Math_Challenge.xcdatamodeld in Sources */,
 				7B30748D1F2CFDB900BAC923 /* MainVC.swift in Sources */,
 				7BD75CCF1F2B6864005F4F5A /* InitVC.swift in Sources */,
-				7B30748F1F2CFDCB00BAC923 /* StatVC.swift in Sources */,
 				7BD75CCD1F2B6864005F4F5A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

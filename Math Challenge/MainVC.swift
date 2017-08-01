@@ -19,6 +19,8 @@ class MainVC: UIViewController {
     @IBOutlet weak var timeCounter: UIProgressView!
     @IBOutlet weak var startBtn: UIButton!
     @IBOutlet weak var record: UILabel!
+    @IBOutlet weak var correctBtn: UIButton!
+    @IBOutlet weak var wrongBtn: UIButton!
     
     @IBOutlet weak var currentScoreLbl: UILabel!
     @IBOutlet weak var highestScoreLbl: UILabel!
@@ -53,11 +55,11 @@ class MainVC: UIViewController {
         
         //setup fail popup
         self.failPopupBanner.layer.cornerRadius = 10
-        self.failPopupBanner.backgroundColor = UIColor.gray
+        self.failPopupBanner.backgroundColor = UIColor.init(red: 255, green: 246, blue: 210)
         self.failBackBtn.layer.cornerRadius = 4
         self.failPlayAgainBtn.layer.cornerRadius = 4
         
-        let blurEffectPopup = UIBlurEffect(style: UIBlurEffectStyle.extraLight)
+        let blurEffectPopup = UIBlurEffect(style: UIBlurEffectStyle.light)
         let blurEffectViewPopup = UIVisualEffectView(effect: blurEffectPopup)
         blurEffectViewPopup.frame = self.failPopupView.bounds
         blurEffectViewPopup.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -66,6 +68,14 @@ class MainVC: UIViewController {
         self.failPopupView.backgroundColor = UIColor.clear
         self.failPopupView.insertSubview(blurEffectViewPopup, at: 0)
         
+        self.view.backgroundColor = UIColor.init(red: 255, green: 189, blue: 142)
+        
+        self.correctBtn.layer.cornerRadius = 50
+        self.wrongBtn.layer.cornerRadius = 50
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -73,7 +83,6 @@ class MainVC: UIViewController {
     }
     
     @IBAction func reloadPlayGround(_ sender: Any) {
-        self.result.text = "0"
         self.timeCounter.progress = 1.0
         self.startBtn.isHidden = false
         self.failPopupView.isHidden = true
@@ -126,6 +135,8 @@ class MainVC: UIViewController {
     }
     
     @IBAction func hideBtnView(_ sender: Any) {
+        self.record.text = "0"
+        self.recordInt = 0
         self.maxTime = 300
         
         self.startBtn.isHidden = true
@@ -137,13 +148,7 @@ class MainVC: UIViewController {
     
     @IBAction func correctPressed(_ sender: Any) {
         if self.isCorrect {
-            self.recordInt += 1
-            self.record.text = "\(self.recordInt)"
-            self.timer.invalidate()
-            self.timeCounter.progress = 1.0
-            self.maxTime = 300
-            self.timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(MainVC.setProgressBar), userInfo: nil, repeats: true)
-            self.initResult()
+            self.processCorrectChooice()
         } else {
             self.showFailPopup()
         }
@@ -151,16 +156,20 @@ class MainVC: UIViewController {
     
     @IBAction func wrongPressed(_ sender: Any) {
         if !self.isCorrect {
-            self.recordInt += 1
-            self.record.text = "\(self.recordInt)"
-            self.timer.invalidate()
-            self.timeCounter.progress = 1.0
-            self.maxTime = 300
-            self.timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(MainVC.setProgressBar), userInfo: nil, repeats: true)
-            self.initResult()
+            self.processCorrectChooice()
         } else {
             self.showFailPopup()
         }
+    }
+    
+    func processCorrectChooice() {
+        self.recordInt += 1
+        self.record.text = "\(self.recordInt)"
+        self.timer.invalidate()
+        self.timeCounter.progress = 1.0
+        self.maxTime = 300
+        self.timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(MainVC.setProgressBar), userInfo: nil, repeats: true)
+        self.initResult()
     }
     
     func showFailPopup() {
