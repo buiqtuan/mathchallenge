@@ -34,7 +34,7 @@ class ViewController: UIViewController {
         
         self.statBtn.layer.cornerRadius = 50
         
-        self.view.backgroundColor = UIColor.init(red: 255, green: 189, blue: 142)
+        self.view.backgroundColor = UIColor.init(red: 195, green: 244, blue: 200)
         
         //set on-click animation for buttons
         UIView.animate(withDuration: 0.3,
@@ -52,6 +52,13 @@ class ViewController: UIViewController {
                     self.appNameLbl.transform = CGAffineTransform.identity
                 }
         })
+        
+        //Change the title every time it get reloaded
+        self.bannerDisplay.text = "\(randomInt(min: 1, max: 9)) + \(randomInt(min: 1, max: 9)) = ?"
+    }
+    
+    func randomInt(min: Int, max:Int) -> Int {
+        return min + Int(arc4random_uniform(UInt32(max - min + 1)))
     }
     
     @IBAction func playNowPressed(_ sender: Any) {

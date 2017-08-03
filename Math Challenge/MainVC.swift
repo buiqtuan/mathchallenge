@@ -8,11 +8,12 @@
 
 import UIKit
 import AudioToolbox
+import GoogleMobileAds
 
 let KEY_RECORD_HIGHEST = "KEY_RECORD_HIGHEST"
 let KEY_RECORD_CURRENT = "KEY_RECORD_CURRENT"
 
-class MainVC: UIViewController {
+class MainVC: UIViewController, GADInterstitialDelegate {
     @IBOutlet weak var firstFactor: UILabel!
     @IBOutlet weak var secondFactor: UILabel!
     @IBOutlet weak var result: UILabel!
@@ -37,12 +38,20 @@ class MainVC: UIViewController {
     var resultInt = 0
     var recordInt = 0
     var isCorrect = false
+    var showAdTimer = Timer()
+    
+    var subInterstitial: GADInterstitial!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.   
-        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.prominent)
+        // Do any additional setup after loading the view.
+        let blurEffect: UIBlurEffect!
+        if #available(iOS 10.0, *) {
+            blurEffect = UIBlurEffect(style: UIBlurEffectStyle.prominent)
+        } else {
+            blurEffect = UIBlurEffect(style: UIBlurEffectStyle.light)
+        }
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         
         blurEffectView.frame = self.startBtn.bounds
@@ -68,10 +77,31 @@ class MainVC: UIViewController {
         self.failPopupView.backgroundColor = UIColor.clear
         self.failPopupView.insertSubview(blurEffectViewPopup, at: 0)
         
-        self.view.backgroundColor = UIColor.init(red: 255, green: 189, blue: 142)
+        self.view.backgroundColor = UIColor.init(red: 195, green: 244, blue: 200)
         
         self.correctBtn.layer.cornerRadius = 50
         self.wrongBtn.layer.cornerRadius = 50
+        
+        self.timeCounter.layer.cornerRadius = 3
+        self.timeCounter.layer.masksToBounds = true
+        
+        //set inter ads
+        subInterstitial = GADInterstitial(adUnitID: AD_INTER_TEST_ID)
+        subInterstitial.delegate = self
+        subInterstitial.load(GADRequest())
+        
+        self.showAdTimer = Timer.scheduledTimer(timeInterval: 1.8, target: self, selector: #selector(MainVC.callInterAds), userInfo: nil, repeats: false)
+    }
+    
+    func createAndLoadInterstitial() -> GADInterstitial {
+        self.subInterstitial = GADInterstitial(adUnitID: AD_INTER_TEST_ID)
+        subInterstitial.delegate = self
+        subInterstitial.load(GADRequest())
+        return subInterstitial
+    }
+    
+    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
+        self.subInterstitial = createAndLoadInterstitial()
     }
     
     override var prefersStatusBarHidden: Bool {
@@ -110,16 +140,31 @@ class MainVC: UIViewController {
                 resultInt = randomInt(min: sum - 2, max: sum)
             }
             if sum < 40 && sum >= 20 {
-                resultInt = randomInt(min: sum - 4, max: sum)
+                if randomInt(min: 0, max: 1) == 1 {
+                    resultInt = sum + 10
+                } else {
+                    resultInt = randomInt(min: sum - 4, max: sum)
+                }
             }
             if sum < 60 && sum >= 40{
-                resultInt = randomInt(min: sum - 4, max: sum)
+                if randomInt(min: 0, max: 1) == 1 {
+                    resultInt = sum - 10
+                } else {
+                    resultInt = randomInt(min: sum - 4, max: sum)
+                }
             }
             if sum < 80 && sum >= 60 {
-                resultInt = randomInt(min: sum - 6, max: sum)
-            }
+                if randomInt(min: 0, max: 1) == 1 {
+                    resultInt = sum + 10
+                } else {
+                    resultInt = randomInt(min: sum - 4, max: sum)
+                }            }
             if sum <= 100 && sum >= 80 {
-                resultInt = randomInt(min: sum - 6, max: sum)
+                if randomInt(min: 0, max: 1) == 1 {
+                    resultInt = sum - 10
+                } else {
+                    resultInt = randomInt(min: sum - 6, max: sum)
+                }
             }
         }
         self.result.text = "\(resultInt)"
@@ -182,6 +227,14 @@ class MainVC: UIViewController {
         self.currentScoreLbl.text = "Current Score: \(UserDefaults.standard.integer(forKey: KEY_RECORD_CURRENT))"
         self.highestScoreLbl.text = "Highest Score: \(UserDefaults.standard.integer(forKey: KEY_RECORD_HIGHEST))"
         self.failPopupView.isHidden = false
+        //set timer to call inter ads
+        self.showAdTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(MainVC.callInterAds), userInfo: nil, repeats: false)
+    }
+    
+    func callInterAds() {
+        if self.subInterstitial.isReady {
+            self.subInterstitial.present(fromRootViewController: self)
+        }
     }
     
     func randomInt(min: Int, max:Int) -> Int {

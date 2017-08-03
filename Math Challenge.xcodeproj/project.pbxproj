@@ -7,16 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5ED09E0B85B7FF95C883D249 /* Pods_Math_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E3B6F7CACDB8189A91B286 /* Pods_Math_Challenge.framework */; };
 		7B3074871F2CCD5300BAC923 /* Neon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7B3074861F2CCD5300BAC923 /* Neon.ttf */; };
 		7B3074891F2CCE7400BAC923 /* varsity_regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7B3074881F2CCE7400BAC923 /* varsity_regular.ttf */; };
 		7B30748B1F2CCED700BAC923 /* Freshman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7B30748A1F2CCED700BAC923 /* Freshman.ttf */; };
 		7B30748D1F2CFDB900BAC923 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B30748C1F2CFDB900BAC923 /* MainVC.swift */; };
 		7B70E31F1F2E355700B68B16 /* InitStatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B70E31E1F2E355700B68B16 /* InitStatVC.swift */; };
+		7BD520A11F32326400050092 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD520A01F32326400050092 /* Constants.swift */; };
 		7BD531081F30BE21001ECD82 /* projectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD531071F30BE21001ECD82 /* projectExtensions.swift */; };
 		7BD75CCD1F2B6864005F4F5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD75CCC1F2B6864005F4F5A /* AppDelegate.swift */; };
 		7BD75CCF1F2B6864005F4F5A /* InitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD75CCE1F2B6864005F4F5A /* InitVC.swift */; };
 		7BD75CD21F2B6864005F4F5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BD75CD01F2B6864005F4F5A /* Main.storyboard */; };
-		7BD75CD51F2B6864005F4F5A /* Math_Challenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7BD75CD31F2B6864005F4F5A /* Math_Challenge.xcdatamodeld */; };
 		7BD75CD71F2B6864005F4F5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BD75CD61F2B6864005F4F5A /* Assets.xcassets */; };
 		7BD75CDA1F2B6864005F4F5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BD75CD81F2B6864005F4F5A /* LaunchScreen.storyboard */; };
 		7BD75CE51F2B6864005F4F5A /* Math_ChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD75CE41F2B6864005F4F5A /* Math_ChallengeTests.swift */; };
@@ -46,12 +47,12 @@
 		7B30748A1F2CCED700BAC923 /* Freshman.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Freshman.ttf; sourceTree = "<group>"; };
 		7B30748C1F2CFDB900BAC923 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		7B70E31E1F2E355700B68B16 /* InitStatVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitStatVC.swift; sourceTree = "<group>"; };
+		7BD520A01F32326400050092 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7BD531071F30BE21001ECD82 /* projectExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = projectExtensions.swift; sourceTree = "<group>"; };
 		7BD75CC91F2B6864005F4F5A /* Math Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Math Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BD75CCC1F2B6864005F4F5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BD75CCE1F2B6864005F4F5A /* InitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitVC.swift; sourceTree = "<group>"; };
 		7BD75CD11F2B6864005F4F5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		7BD75CD41F2B6864005F4F5A /* Math_Challenge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Math_Challenge.xcdatamodel; sourceTree = "<group>"; };
 		7BD75CD61F2B6864005F4F5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BD75CD91F2B6864005F4F5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7BD75CDB1F2B6864005F4F5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -61,6 +62,9 @@
 		7BD75CEB1F2B6864005F4F5A /* Math ChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Math ChallengeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BD75CEF1F2B6864005F4F5A /* Math_ChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Math_ChallengeUITests.swift; sourceTree = "<group>"; };
 		7BD75CF11F2B6864005F4F5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC192335FD1F833EBEC6B3FF /* Pods-Math Challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Math Challenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Math Challenge/Pods-Math Challenge.debug.xcconfig"; sourceTree = "<group>"; };
+		F6E3B6F7CACDB8189A91B286 /* Pods_Math_Challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Math_Challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA183D89772547630D574777 /* Pods-Math Challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Math Challenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-Math Challenge/Pods-Math Challenge.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5ED09E0B85B7FF95C883D249 /* Pods_Math_Challenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +100,8 @@
 				7BD75CE31F2B6864005F4F5A /* Math ChallengeTests */,
 				7BD75CEE1F2B6864005F4F5A /* Math ChallengeUITests */,
 				7BD75CCA1F2B6864005F4F5A /* Products */,
+				AA3ADDA842C42219962D7427 /* Pods */,
+				825C85634C8F1A40E99E4CEA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,6 +123,7 @@
 				7BD531071F30BE21001ECD82 /* projectExtensions.swift */,
 				7B30748C1F2CFDB900BAC923 /* MainVC.swift */,
 				7B70E31E1F2E355700B68B16 /* InitStatVC.swift */,
+				7BD520A01F32326400050092 /* Constants.swift */,
 				7BD75CD01F2B6864005F4F5A /* Main.storyboard */,
 				7B30748A1F2CCED700BAC923 /* Freshman.ttf */,
 				7B3074881F2CCE7400BAC923 /* varsity_regular.ttf */,
@@ -123,7 +131,6 @@
 				7BD75CD61F2B6864005F4F5A /* Assets.xcassets */,
 				7BD75CD81F2B6864005F4F5A /* LaunchScreen.storyboard */,
 				7BD75CDB1F2B6864005F4F5A /* Info.plist */,
-				7BD75CD31F2B6864005F4F5A /* Math_Challenge.xcdatamodeld */,
 			);
 			path = "Math Challenge";
 			sourceTree = "<group>";
@@ -146,6 +153,23 @@
 			path = "Math ChallengeUITests";
 			sourceTree = "<group>";
 		};
+		825C85634C8F1A40E99E4CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F6E3B6F7CACDB8189A91B286 /* Pods_Math_Challenge.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AA3ADDA842C42219962D7427 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EC192335FD1F833EBEC6B3FF /* Pods-Math Challenge.debug.xcconfig */,
+				FA183D89772547630D574777 /* Pods-Math Challenge.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -153,9 +177,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7BD75CF41F2B6864005F4F5A /* Build configuration list for PBXNativeTarget "Math Challenge" */;
 			buildPhases = (
+				F609DB0F84FBF22D2DDB46D7 /* [CP] Check Pods Manifest.lock */,
 				7BD75CC51F2B6864005F4F5A /* Sources */,
 				7BD75CC61F2B6864005F4F5A /* Frameworks */,
 				7BD75CC71F2B6864005F4F5A /* Resources */,
+				22F1A1F6A88BA15A3B4216B9 /* [CP] Embed Pods Frameworks */,
+				2BED85444D6275324396F327 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -279,6 +306,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		22F1A1F6A88BA15A3B4216B9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Math Challenge/Pods-Math Challenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2BED85444D6275324396F327 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Math Challenge/Pods-Math Challenge-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F609DB0F84FBF22D2DDB46D7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7BD75CC51F2B6864005F4F5A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -286,8 +361,8 @@
 			files = (
 				7B70E31F1F2E355700B68B16 /* InitStatVC.swift in Sources */,
 				7BD531081F30BE21001ECD82 /* projectExtensions.swift in Sources */,
-				7BD75CD51F2B6864005F4F5A /* Math_Challenge.xcdatamodeld in Sources */,
 				7B30748D1F2CFDB900BAC923 /* MainVC.swift in Sources */,
+				7BD520A11F32326400050092 /* Constants.swift in Sources */,
 				7BD75CCF1F2B6864005F4F5A /* InitVC.swift in Sources */,
 				7BD75CCD1F2B6864005F4F5A /* AppDelegate.swift in Sources */,
 			);
@@ -441,10 +516,12 @@
 		};
 		7BD75CF51F2B6864005F4F5A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC192335FD1F833EBEC6B3FF /* Pods-Math Challenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 84L594LFKJ;
 				INFOPLIST_FILE = "Math Challenge/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "tuanbq.Math-Challenge";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -454,10 +531,12 @@
 		};
 		7BD75CF61F2B6864005F4F5A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA183D89772547630D574777 /* Pods-Math Challenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 84L594LFKJ;
 				INFOPLIST_FILE = "Math Challenge/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "tuanbq.Math-Challenge";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -559,19 +638,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		7BD75CD31F2B6864005F4F5A /* Math_Challenge.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				7BD75CD41F2B6864005F4F5A /* Math_Challenge.xcdatamodel */,
-			);
-			currentVersion = 7BD75CD41F2B6864005F4F5A /* Math_Challenge.xcdatamodel */;
-			path = Math_Challenge.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 7BD75CC11F2B6864005F4F5A /* Project object */;
 }
