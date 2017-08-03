@@ -117,7 +117,7 @@
                                     <constraint firstAttribute="height" constant="35" id="7wn-DO-KoH"/>
                                     <constraint firstAttribute="width" constant="35" id="AQT-fb-0Yf"/>
                                 </constraints>
-                                <state key="normal" image="back_icon_green"/>
+                                <state key="normal" image="back_icon_green_final"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="WcG-yh-KZ3"/>
                                 </connections>
@@ -128,7 +128,7 @@
                                     <constraint firstAttribute="width" constant="35" id="AyB-em-c1L"/>
                                     <constraint firstAttribute="height" constant="35" id="IAD-Uh-Q21"/>
                                 </constraints>
-                                <state key="normal" image="refresh_icon_red"/>
+                                <state key="normal" image="refresh_icon_final"/>
                                 <connections>
                                     <action selector="reloadPlayGround:" destination="IA3-DS-7Yo" eventType="touchUpInside" id="lEJ-92-tjB"/>
                                 </connections>
@@ -140,7 +140,7 @@
                                     <constraint firstAttribute="height" constant="35" id="nGM-WR-TMW"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Freshman" family="Freshman" pointSize="17"/>
-                                <color key="textColor" red="0.22998927150000001" green="0.6521851206" blue="0.40495994610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.16426118990277777" green="0.6521851206" blue="0.40495994610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Hsk-Qv-aTP">
@@ -177,7 +177,7 @@
                                                 <color key="textColor" red="0.22998927150000001" green="0.6521851206" blue="0.40495994610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add_icon_green" translatesAutoresizingMaskIntoConstraints="NO" id="o3I-UZ-Bqb">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add_icon_final" translatesAutoresizingMaskIntoConstraints="NO" id="o3I-UZ-Bqb">
                                                 <rect key="frame" x="110" y="0.0" width="50" height="50.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="KaN-8m-1o4"/>
@@ -196,7 +196,7 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="equal_icon_green" translatesAutoresizingMaskIntoConstraints="NO" id="VJZ-pZ-TQE">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="equal_icon_final" translatesAutoresizingMaskIntoConstraints="NO" id="VJZ-pZ-TQE">
                                         <rect key="frame" x="114" y="148" width="60" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="Si5-ww-oJ2"/>
@@ -247,6 +247,13 @@
                                     <constraint firstItem="i4T-lV-SaE" firstAttribute="leading" secondItem="Hsk-Qv-aTP" secondAttribute="leading" constant="8" id="pza-m5-dA2"/>
                                 </constraints>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3pp-SW-myX">
+                                <rect key="frame" x="0.0" y="518" width="320" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="VBn-X0-qnR"/>
+                                </constraints>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4R-5W-asE">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <fontDescription key="fontDescription" name="Freshman" family="Freshman" pointSize="40"/>
@@ -362,11 +369,13 @@
                             <constraint firstItem="b4R-5W-asE" firstAttribute="leading" secondItem="pmX-1y-1yn" secondAttribute="leading" id="6Ko-lK-jmN"/>
                             <constraint firstItem="wTU-fU-yaL" firstAttribute="top" secondItem="8RU-gF-dJ2" secondAttribute="bottom" constant="8" id="6Yk-JI-EMA"/>
                             <constraint firstItem="b4R-5W-asE" firstAttribute="top" secondItem="pmX-1y-1yn" secondAttribute="top" id="7sa-he-qjH"/>
+                            <constraint firstItem="3pp-SW-myX" firstAttribute="centerX" secondItem="pmX-1y-1yn" secondAttribute="centerX" id="8Ur-IY-mzT"/>
                             <constraint firstItem="wTU-fU-yaL" firstAttribute="leading" secondItem="pmX-1y-1yn" secondAttribute="leadingMargin" id="9O0-Sx-TaL"/>
                             <constraint firstItem="Hsk-Qv-aTP" firstAttribute="leading" secondItem="pmX-1y-1yn" secondAttribute="leadingMargin" id="9dl-JE-AvE"/>
                             <constraint firstItem="8G6-aB-5h5" firstAttribute="centerX" secondItem="pmX-1y-1yn" secondAttribute="centerX" id="BWx-Lx-g3H"/>
                             <constraint firstItem="b4R-5W-asE" firstAttribute="centerY" secondItem="pmX-1y-1yn" secondAttribute="centerY" id="GvU-ym-ewT"/>
                             <constraint firstItem="b4R-5W-asE" firstAttribute="centerX" secondItem="pmX-1y-1yn" secondAttribute="centerX" id="HVj-4C-KTw"/>
+                            <constraint firstItem="hu8-eA-GeE" firstAttribute="top" secondItem="3pp-SW-myX" secondAttribute="bottom" id="OOP-jw-3M9"/>
                             <constraint firstItem="4gB-c7-RJC" firstAttribute="top" secondItem="8RU-gF-dJ2" secondAttribute="bottom" constant="8" id="PUQ-n5-eX3"/>
                             <constraint firstItem="4gB-c7-RJC" firstAttribute="trailing" secondItem="pmX-1y-1yn" secondAttribute="trailingMargin" id="YPe-dU-77F"/>
                             <constraint firstAttribute="trailing" secondItem="b4R-5W-asE" secondAttribute="trailing" id="dJm-8z-bEr"/>
@@ -375,12 +384,15 @@
                             <constraint firstItem="Hsk-Qv-aTP" firstAttribute="trailing" secondItem="pmX-1y-1yn" secondAttribute="trailingMargin" id="i1w-Fc-uWd"/>
                             <constraint firstItem="kNB-m6-XnQ" firstAttribute="leading" secondItem="pmX-1y-1yn" secondAttribute="leading" id="jtb-Bg-sBZ"/>
                             <constraint firstItem="kNB-m6-XnQ" firstAttribute="top" secondItem="pmX-1y-1yn" secondAttribute="top" id="laS-Pr-wZf"/>
+                            <constraint firstAttribute="trailing" secondItem="3pp-SW-myX" secondAttribute="trailing" id="nyu-1R-ztY"/>
+                            <constraint firstItem="3pp-SW-myX" firstAttribute="leading" secondItem="pmX-1y-1yn" secondAttribute="leading" id="oTI-Ec-e13"/>
                             <constraint firstItem="kNB-m6-XnQ" firstAttribute="centerY" secondItem="pmX-1y-1yn" secondAttribute="centerY" id="sSI-wA-uuB"/>
                             <constraint firstItem="Hsk-Qv-aTP" firstAttribute="centerX" secondItem="pmX-1y-1yn" secondAttribute="centerX" id="tbZ-eH-z7x"/>
                             <constraint firstAttribute="trailing" secondItem="kNB-m6-XnQ" secondAttribute="trailing" id="x5c-8c-GRE"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bannerViewMainVC" destination="3pp-SW-myX" id="hFW-j4-lfF"/>
                         <outlet property="correctBtn" destination="HAk-2M-epm" id="0W4-2J-k9Y"/>
                         <outlet property="currentScoreLbl" destination="9ex-gu-TgH" id="9Ge-U5-C4j"/>
                         <outlet property="failBackBtn" destination="CVR-8b-29I" id="q4G-Dt-gIm"/>
@@ -498,11 +510,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="add_icon_green" width="256" height="256"/>
+        <image name="add_icon_final" width="256" height="256"/>
         <image name="back_icon_green" width="144" height="144"/>
+        <image name="back_icon_green_final" width="144" height="144"/>
         <image name="correct" width="720" height="720"/>
-        <image name="equal_icon_green" width="256" height="256"/>
-        <image name="refresh_icon_red" width="144" height="144"/>
+        <image name="equal_icon_final" width="256" height="256"/>
+        <image name="refresh_icon_final" width="144" height="144"/>
         <image name="stat_green" width="512" height="512"/>
         <image name="wrong" width="512" height="512"/>
     </resources>

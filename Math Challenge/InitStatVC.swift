@@ -51,12 +51,12 @@ class InitStatVC: UIViewController, GADBannerViewDelegate, GADInterstitialDelega
         bannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
         bannerView.delegate = self
         self.adsBannerView.addSubview(self.bannerView)
-        bannerView.adUnitID = AD_BANNER_TEST_ID
+        bannerView.adUnitID = AD_BANNER_ID
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
         
         //set up inter add
-        interstitial = GADInterstitial(adUnitID: AD_INTER_TEST_ID)
+        interstitial = GADInterstitial(adUnitID: AD_INTER_STAT_VC_ID)
         let request = GADRequest()
         interstitial.load(request)
         interstitial.delegate = self
@@ -83,7 +83,7 @@ class InitStatVC: UIViewController, GADBannerViewDelegate, GADInterstitialDelega
     }
     
     func createAndLoadInterstitial() -> GADInterstitial {
-        let _interstitial = GADInterstitial(adUnitID: AD_INTER_TEST_ID)
+        let _interstitial = GADInterstitial(adUnitID: AD_INTER_STAT_VC_ID)
         _interstitial.delegate = self
         _interstitial.load(GADRequest())
         return _interstitial
