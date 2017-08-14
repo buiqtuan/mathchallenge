@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -247,13 +247,6 @@
                                     <constraint firstItem="i4T-lV-SaE" firstAttribute="leading" secondItem="Hsk-Qv-aTP" secondAttribute="leading" constant="8" id="pza-m5-dA2"/>
                                 </constraints>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3pp-SW-myX">
-                                <rect key="frame" x="0.0" y="518" width="320" height="50"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="VBn-X0-qnR"/>
-                                </constraints>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4R-5W-asE">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <fontDescription key="fontDescription" name="Freshman" family="Freshman" pointSize="40"/>
@@ -369,13 +362,11 @@
                             <constraint firstItem="b4R-5W-asE" firstAttribute="leading" secondItem="pmX-1y-1yn" secondAttribute="leading" id="6Ko-lK-jmN"/>
                             <constraint firstItem="wTU-fU-yaL" firstAttribute="top" secondItem="8RU-gF-dJ2" secondAttribute="bottom" constant="8" id="6Yk-JI-EMA"/>
                             <constraint firstItem="b4R-5W-asE" firstAttribute="top" secondItem="pmX-1y-1yn" secondAttribute="top" id="7sa-he-qjH"/>
-                            <constraint firstItem="3pp-SW-myX" firstAttribute="centerX" secondItem="pmX-1y-1yn" secondAttribute="centerX" id="8Ur-IY-mzT"/>
                             <constraint firstItem="wTU-fU-yaL" firstAttribute="leading" secondItem="pmX-1y-1yn" secondAttribute="leadingMargin" id="9O0-Sx-TaL"/>
                             <constraint firstItem="Hsk-Qv-aTP" firstAttribute="leading" secondItem="pmX-1y-1yn" secondAttribute="leadingMargin" id="9dl-JE-AvE"/>
                             <constraint firstItem="8G6-aB-5h5" firstAttribute="centerX" secondItem="pmX-1y-1yn" secondAttribute="centerX" id="BWx-Lx-g3H"/>
                             <constraint firstItem="b4R-5W-asE" firstAttribute="centerY" secondItem="pmX-1y-1yn" secondAttribute="centerY" id="GvU-ym-ewT"/>
                             <constraint firstItem="b4R-5W-asE" firstAttribute="centerX" secondItem="pmX-1y-1yn" secondAttribute="centerX" id="HVj-4C-KTw"/>
-                            <constraint firstItem="hu8-eA-GeE" firstAttribute="top" secondItem="3pp-SW-myX" secondAttribute="bottom" id="OOP-jw-3M9"/>
                             <constraint firstItem="4gB-c7-RJC" firstAttribute="top" secondItem="8RU-gF-dJ2" secondAttribute="bottom" constant="8" id="PUQ-n5-eX3"/>
                             <constraint firstItem="4gB-c7-RJC" firstAttribute="trailing" secondItem="pmX-1y-1yn" secondAttribute="trailingMargin" id="YPe-dU-77F"/>
                             <constraint firstAttribute="trailing" secondItem="b4R-5W-asE" secondAttribute="trailing" id="dJm-8z-bEr"/>
@@ -384,15 +375,12 @@
                             <constraint firstItem="Hsk-Qv-aTP" firstAttribute="trailing" secondItem="pmX-1y-1yn" secondAttribute="trailingMargin" id="i1w-Fc-uWd"/>
                             <constraint firstItem="kNB-m6-XnQ" firstAttribute="leading" secondItem="pmX-1y-1yn" secondAttribute="leading" id="jtb-Bg-sBZ"/>
                             <constraint firstItem="kNB-m6-XnQ" firstAttribute="top" secondItem="pmX-1y-1yn" secondAttribute="top" id="laS-Pr-wZf"/>
-                            <constraint firstAttribute="trailing" secondItem="3pp-SW-myX" secondAttribute="trailing" id="nyu-1R-ztY"/>
-                            <constraint firstItem="3pp-SW-myX" firstAttribute="leading" secondItem="pmX-1y-1yn" secondAttribute="leading" id="oTI-Ec-e13"/>
                             <constraint firstItem="kNB-m6-XnQ" firstAttribute="centerY" secondItem="pmX-1y-1yn" secondAttribute="centerY" id="sSI-wA-uuB"/>
                             <constraint firstItem="Hsk-Qv-aTP" firstAttribute="centerX" secondItem="pmX-1y-1yn" secondAttribute="centerX" id="tbZ-eH-z7x"/>
                             <constraint firstAttribute="trailing" secondItem="kNB-m6-XnQ" secondAttribute="trailing" id="x5c-8c-GRE"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="bannerViewMainVC" destination="3pp-SW-myX" id="hFW-j4-lfF"/>
                         <outlet property="correctBtn" destination="HAk-2M-epm" id="0W4-2J-k9Y"/>
                         <outlet property="currentScoreLbl" destination="9ex-gu-TgH" id="9Ge-U5-C4j"/>
                         <outlet property="failBackBtn" destination="CVR-8b-29I" id="q4G-Dt-gIm"/>
@@ -474,34 +462,61 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eiG-8e-5ez">
-                                <rect key="frame" x="0.0" y="518" width="320" height="50"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="75R-DQ-Lum"/>
-                                </constraints>
-                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hqU-Bi-rsD">
+                                <rect key="frame" x="35" y="430" width="250" height="120"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOZ-3x-pWg">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="50"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="0g3-fe-DfS"/>
+                                            <constraint firstAttribute="height" constant="50" id="eOK-Wb-LGg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Freshman" family="Freshman" pointSize="21"/>
+                                        <state key="normal" title="Share to Facebook">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="shareAction:" destination="5oY-TD-DY8" eventType="touchUpInside" id="BTX-Zd-55s"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ueF-xI-y1B">
+                                        <rect key="frame" x="0.0" y="70" width="250" height="50"/>
+                                        <color key="backgroundColor" red="0.16426118989999999" green="0.6521851206" blue="0.40495994610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Gau-gs-mo7"/>
+                                            <constraint firstAttribute="width" constant="250" id="ZRV-Ff-JPj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Freshman" family="Freshman" pointSize="21"/>
+                                        <state key="normal" title="Rate this App">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="rateAction:" destination="5oY-TD-DY8" eventType="touchUpInside" id="AII-Zh-Idz"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Pew-kc-URb" firstAttribute="top" secondItem="hqU-Bi-rsD" secondAttribute="bottom" constant="18" id="8c9-Nv-YSl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="90Q-15-Tlb" secondAttribute="trailing" constant="14" id="Bp2-Fa-dh2"/>
-                            <constraint firstItem="Pew-kc-URb" firstAttribute="top" secondItem="eiG-8e-5ez" secondAttribute="bottom" id="K9z-K9-Lcy"/>
-                            <constraint firstItem="eiG-8e-5ez" firstAttribute="centerX" secondItem="tqy-BU-kKo" secondAttribute="centerX" id="LIZ-LU-f3T"/>
                             <constraint firstItem="90Q-15-Tlb" firstAttribute="leading" secondItem="tqy-BU-kKo" secondAttribute="leadingMargin" constant="14" id="RAk-t4-xu0"/>
                             <constraint firstItem="90Q-15-Tlb" firstAttribute="centerX" secondItem="tqy-BU-kKo" secondAttribute="centerX" id="W29-mY-kGl"/>
                             <constraint firstItem="90Q-15-Tlb" firstAttribute="top" secondItem="X0T-TJ-brR" secondAttribute="bottom" constant="120" id="cnY-20-VIv"/>
-                            <constraint firstAttribute="trailing" secondItem="eiG-8e-5ez" secondAttribute="trailing" id="csA-eF-WDv"/>
+                            <constraint firstItem="hqU-Bi-rsD" firstAttribute="centerX" secondItem="tqy-BU-kKo" secondAttribute="centerX" id="k2H-Lk-SlG"/>
                             <constraint firstItem="X0T-TJ-brR" firstAttribute="top" secondItem="Ypr-OS-D2v" secondAttribute="bottom" constant="8" id="qzv-RM-YfD"/>
                             <constraint firstItem="X0T-TJ-brR" firstAttribute="leading" secondItem="tqy-BU-kKo" secondAttribute="leadingMargin" id="uqb-Xp-Okg"/>
-                            <constraint firstItem="eiG-8e-5ez" firstAttribute="leading" secondItem="tqy-BU-kKo" secondAttribute="leading" id="yF7-b4-spq"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="adsBannerView" destination="eiG-8e-5ez" id="s7t-Ai-dcu"/>
                         <outlet property="backBtn" destination="X0T-TJ-brR" id="dZm-kG-swF"/>
                         <outlet property="currentScoreLbl" destination="AWS-QY-nqX" id="fhE-tk-lc6"/>
                         <outlet property="highestScoreLbl" destination="Uj8-Ob-2X3" id="7GG-qp-lro"/>
+                        <outlet property="rateAppBtn" destination="ueF-xI-y1B" id="vAF-pM-Hgx"/>
                         <outlet property="recordStackView" destination="90Q-15-Tlb" id="D6R-c5-D3t"/>
+                        <outlet property="shareBtn" destination="hOZ-3x-pWg" id="b9w-KQ-gaj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m4h-Xi-zCe" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -520,6 +535,6 @@
         <image name="wrong" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="WcG-yh-KZ3"/>
+        <segue reference="FvP-cI-I0h"/>
     </inferredMetricsTieBreakers>
 </document>

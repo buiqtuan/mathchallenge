@@ -30,8 +30,6 @@ class MainVC: UIViewController, GADInterstitialDelegate,GADBannerViewDelegate {
     @IBOutlet weak var failBackBtn: UIButton!
     @IBOutlet weak var failPlayAgainBtn: UIButton!
     
-    @IBOutlet weak var bannerViewMainVC: UIView!
-    
     var bannerView: GADBannerView!
     
     var timer = Timer()
@@ -95,13 +93,6 @@ class MainVC: UIViewController, GADInterstitialDelegate,GADBannerViewDelegate {
         
         self.showAdTimer = Timer.scheduledTimer(timeInterval: 1.2, target: self, selector: #selector(MainVC.callInterAds), userInfo: nil, repeats: false)
         
-        //set banner ads
-        bannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
-        bannerView.delegate = self
-        self.bannerViewMainVC.addSubview(self.bannerView)
-        bannerView.adUnitID = AD_BANNER_ID
-        bannerView.rootViewController = self
-        bannerView.load(GADRequest())
     }
     
     func adViewDidReceiveAd(_ bannerView: GADBannerView) {
@@ -246,7 +237,7 @@ class MainVC: UIViewController, GADInterstitialDelegate,GADBannerViewDelegate {
         self.highestScoreLbl.text = "Highest Score: \(UserDefaults.standard.integer(forKey: KEY_RECORD_HIGHEST))"
         self.failPopupView.isHidden = false
         //set timer to call inter ads
-        self.showAdTimer = Timer.scheduledTimer(timeInterval: 1.5, target: self, selector: #selector(MainVC.callInterAds), userInfo: nil, repeats: false)
+        self.showAdTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(MainVC.callInterAds), userInfo: nil, repeats: false)
     }
     
     func callInterAds() {

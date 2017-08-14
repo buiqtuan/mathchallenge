@@ -16,3 +16,6 @@ let AD_INTER_PLAYGROUND_ID = "ca-app-pub-9562198892708304/9271715323"
 
 let AD_BANNER_TEST_ID = "ca-app-pub-3940256099942544/6300978111"
 let AD_INTER_TEST_ID = "ca-app-pub-3940256099942544/1033173712"
+
+let ITUNE_APP_URL = "https://itunes.apple.com/us/app/math-challenge-mini-game/id1267386519?mt=8"
+let ITUNE_APP_REVIEW_URL = "https://itunes.apple.com/us/app/id1267386519?ls=1&mt=8&action=write-review"

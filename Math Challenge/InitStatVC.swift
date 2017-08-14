@@ -8,16 +8,17 @@
 
 import UIKit
 import GoogleMobileAds
+import FBSDKShareKit
 
-class InitStatVC: UIViewController, GADBannerViewDelegate, GADInterstitialDelegate {
+class InitStatVC: UIViewController, GADInterstitialDelegate {
     @IBOutlet weak var currentScoreLbl: UILabel!
     @IBOutlet weak var highestScoreLbl: UILabel!
     @IBOutlet weak var recordStackView: UIStackView!
     @IBOutlet weak var backBtn: UIButton!
-    @IBOutlet weak var adsBannerView: UIView!
+    @IBOutlet weak var shareBtn: UIButton!
+    @IBOutlet weak var rateAppBtn: UIButton!
     
     var interstitial: GADInterstitial!
-    var bannerView: GADBannerView!
     var timer = Timer()
 
     override func viewDidLoad() {
@@ -45,15 +46,6 @@ class InitStatVC: UIViewController, GADBannerViewDelegate, GADInterstitialDelega
                             self.backBtn.transform = CGAffineTransform.identity
                         }
         })
-        self.adsBannerView.backgroundColor = UIColor.init(red: 195, green: 244, blue: 200)
-        
-        //set up banner ads
-        bannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
-        bannerView.delegate = self
-        self.adsBannerView.addSubview(self.bannerView)
-        bannerView.adUnitID = AD_BANNER_ID
-        bannerView.rootViewController = self
-        bannerView.load(GADRequest())
         
         //set up inter add
         interstitial = GADInterstitial(adUnitID: AD_INTER_STAT_VC_ID)
@@ -62,19 +54,34 @@ class InitStatVC: UIViewController, GADBannerViewDelegate, GADInterstitialDelega
         interstitial.delegate = self
         
         //set timer to call inter ads
-        self.timer = Timer.scheduledTimer(timeInterval: 0.8, target: self, selector: #selector(InitStatVC.callInterAds), userInfo: nil, repeats: false)
-    }
-    
-    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
-        bannerView.alpha = 0
-        UIView.animate(withDuration: 1, animations: {
-            bannerView.alpha = 1
-        })
+        self.timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(InitStatVC.callInterAds), userInfo: nil, repeats: false)
+        
+        //set up share Function
     }
     
     func callInterAds() {
         if self.interstitial.isReady {
             interstitial.present(fromRootViewController: self)
+        }
+    }
+    @IBAction func shareAction(_ sender: Any) {
+        let content: FBSDKShareLinkContent = FBSDKShareLinkContent()
+        content.contentURL = NSURL(string: ITUNE_APP_URL)! as URL
+        content.quote = "Check out this cool mini game, I've just got \(UserDefaults.standard.value(forKey: KEY_RECORD_HIGHEST) ?? "") points, beat me??"
+        
+        FBSDKShareDialog.show(from: self, with: content, delegate: nil)
+    }
+    @IBAction func rateAction(_ sender: Any) {
+        let url: URL = URL(string:ITUNE_APP_REVIEW_URL)!
+        
+        if #available(iOS 10, *) {
+            UIApplication.shared.open(url, options: [:], completionHandler: { (success) in
+                print("Open \(ITUNE_APP_REVIEW_URL): \(success)")
+            })
+        } else {
+            if UIApplication.shared.openURL(url) {
+                print("Open \(ITUNE_APP_REVIEW_URL): success")
+            }
         }
     }
     

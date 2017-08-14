@@ -12,6 +12,10 @@
 		7B3074891F2CCE7400BAC923 /* varsity_regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7B3074881F2CCE7400BAC923 /* varsity_regular.ttf */; };
 		7B30748B1F2CCED700BAC923 /* Freshman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7B30748A1F2CCED700BAC923 /* Freshman.ttf */; };
 		7B30748D1F2CFDB900BAC923 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B30748C1F2CFDB900BAC923 /* MainVC.swift */; };
+		7B43C6FB1F36485D0001BF75 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B43C6F71F36485D0001BF75 /* Bolts.framework */; };
+		7B43C6FC1F36485D0001BF75 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B43C6F81F36485D0001BF75 /* FBSDKCoreKit.framework */; };
+		7B43C6FD1F36485D0001BF75 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B43C6F91F36485D0001BF75 /* FBSDKLoginKit.framework */; };
+		7B43C6FE1F36485D0001BF75 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B43C6FA1F36485D0001BF75 /* FBSDKShareKit.framework */; };
 		7B70E31F1F2E355700B68B16 /* InitStatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B70E31E1F2E355700B68B16 /* InitStatVC.swift */; };
 		7BD520A11F32326400050092 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD520A01F32326400050092 /* Constants.swift */; };
 		7BD531081F30BE21001ECD82 /* projectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD531071F30BE21001ECD82 /* projectExtensions.swift */; };
@@ -46,6 +50,10 @@
 		7B3074881F2CCE7400BAC923 /* varsity_regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = varsity_regular.ttf; sourceTree = "<group>"; };
 		7B30748A1F2CCED700BAC923 /* Freshman.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Freshman.ttf; sourceTree = "<group>"; };
 		7B30748C1F2CFDB900BAC923 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		7B43C6F71F36485D0001BF75 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		7B43C6F81F36485D0001BF75 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		7B43C6F91F36485D0001BF75 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		7B43C6FA1F36485D0001BF75 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		7B70E31E1F2E355700B68B16 /* InitStatVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitStatVC.swift; sourceTree = "<group>"; };
 		7BD520A01F32326400050092 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7BD531071F30BE21001ECD82 /* projectExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = projectExtensions.swift; sourceTree = "<group>"; };
@@ -73,6 +81,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5ED09E0B85B7FF95C883D249 /* Pods_Math_Challenge.framework in Frameworks */,
+				7B43C6FC1F36485D0001BF75 /* FBSDKCoreKit.framework in Frameworks */,
+				7B43C6FE1F36485D0001BF75 /* FBSDKShareKit.framework in Frameworks */,
+				7B43C6FD1F36485D0001BF75 /* FBSDKLoginKit.framework in Frameworks */,
+				7B43C6FB1F36485D0001BF75 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,6 +168,10 @@
 		825C85634C8F1A40E99E4CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7B43C6F71F36485D0001BF75 /* Bolts.framework */,
+				7B43C6F81F36485D0001BF75 /* FBSDKCoreKit.framework */,
+				7B43C6F91F36485D0001BF75 /* FBSDKLoginKit.framework */,
+				7B43C6FA1F36485D0001BF75 /* FBSDKShareKit.framework */,
 				F6E3B6F7CACDB8189A91B286 /* Pods_Math_Challenge.framework */,
 			);
 			name = Frameworks;
@@ -520,12 +536,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 84L594LFKJ;
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Math Challenge/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tuanbq.mathchallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -535,12 +557,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 84L594LFKJ;
+				ENABLE_BITCODE = YES;
+				ENABLE_TESTABILITY = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Math Challenge/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tuanbq.mathchallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
